@@ -1,0 +1,8 @@
+flowchart LR
+  A[Open-Meteo API<br/>Hourly air quality] --> B[EXTRACT Function]
+  C[GeoNames cities15000.zip<br/>population + coords] --> B
+  B --> D[GCS RAW<br/>jsonl.gz]
+  D --> E[LOAD Function<br/>daily aggregation]
+  E --> F[BigQuery PROD<br/>air_quality_history]
+  E --> G[BigQuery OPS<br/>pipeline_runs]
+  F --> H[Looker Studio Dashboard]

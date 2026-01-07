@@ -1,0 +1,11 @@
+flowchart LR
+  A[Cloud Scheduler<br/>Daily 09:00] --> B[Cloud Function 1<br/>EXTRACT]
+  B --> C[(Open-Meteo Air Quality API)]
+  B --> D[(GeoNames cities15000.zip<br/>in GCS)]
+  B --> E[(GCS Bucket<br/>raw/YYYY-MM-DD/run_id.jsonl.gz)]
+  B --> F[(BigQuery<br/>airq_ops.pipeline_runs<br/>EXTRACT logs)]
+  A2[Cloud Scheduler<br/>Daily 10:00] --> G[Cloud Function 2<br/>LOAD]
+  G --> E
+  G --> H[(BigQuery<br/>airq_data.air_quality_history<br/>Daily aggregates)]
+  G --> F
+  H --> I[Looker Studio Dashboard]
