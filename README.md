@@ -237,9 +237,9 @@ Repository GitHub :
 Déploiement via :
 
 - Cloud Shell
-- Cloud Functions (Gen 2)
+- Cloud Functions 
 - Cloud Scheduler
 - BigQuery
 - Looker Studio : https://lookerstudio.google.com/reporting/7b60fe19-b9be-414a-a15f-276a3ce9d109
-- Streamlit
+- Streamlit : https://djeraday-etl-viz-main-lme9rp.streamlit.app/
 
