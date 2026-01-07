@@ -240,5 +240,6 @@ Déploiement via :
 - Cloud Functions (Gen 2)
 - Cloud Scheduler
 - BigQuery
-- Looker Studio / Streamlit
+- Looker Studio : https://lookerstudio.google.com/reporting/7b60fe19-b9be-414a-a15f-276a3ce9d109
+- Streamlit
 
